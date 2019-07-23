@@ -71,7 +71,8 @@ export default {
         completeItem(id) {
             this.list.forEach(function(listItem){
                 if (listItem.id === id) {
-                    listItem.completion_date = "07/22/2019";
+                    var date = new Date();
+                    listItem.completion_date = date.toDateString();
                 }
             });
         },
