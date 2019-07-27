@@ -55,7 +55,7 @@ export default {
             {
                 "id": 1,
                 "name": 'Do the Dishes',
-                "due_date": '07/22/2019',
+                "due_date": moment().format("MM/DD/YYYY"),
                 "completion_date": null,
             },
         ];

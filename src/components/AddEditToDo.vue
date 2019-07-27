@@ -58,7 +58,7 @@ export default {
     },
     methods: {
         addItem() {
-            this.newItem.due_date = moment(this.newItem.due_date).format("MM/DD/YYYY");
+            this.newItem.due_date = this.newItem.due_date ? moment(this.newItem.due_date).format("MM/DD/YYYY") : "No Due Date";
             this.$emit('add', this.newItem);
             this.clearItem();
         },
