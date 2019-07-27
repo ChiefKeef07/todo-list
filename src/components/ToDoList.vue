@@ -34,6 +34,7 @@
 
 <script>
 import AddEditToDo from './AddEditToDo.vue'
+import moment from 'moment'
 
 export default {
     name: 'ToDoList',
@@ -71,8 +72,7 @@ export default {
         completeItem(id) {
             this.list.forEach(function(listItem){
                 if (listItem.id === id) {
-                    var date = new Date();
-                    listItem.completion_date = date.toDateString();
+                    listItem.completion_date = moment().format("MM/DD/YYYY");
                 }
             });
         },
